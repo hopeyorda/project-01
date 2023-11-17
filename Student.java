@@ -9,4 +9,9 @@ class Student extends Person {
     public String getClassroom() {
         return classroom;
     }
+
+    public void setClassroom(Classroom classroom) {
+        this.classroom = String.valueOf(classroom);
+        classroom.getStudents().add(this);
+    }
 }

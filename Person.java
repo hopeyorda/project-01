@@ -1,20 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Person implements Nameable {
-    protected String Name;
+    private String name;
+    private List<Rental> rentals;
 
     public Person(String name) {
-        this.Name = name;
+        this.name = name;
+        this.rentals = new ArrayList<>();
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    public void setName(String name) {
-        this.Name = name;
+    public List<Rental> getRentals() {
+        return rentals;
+    }
+
+    public void addRental(Rental rental) {
+        rentals.add(rental);
     }
 
     @Override
     public String correct_name() {
-        return Name;
+        return null;
     }
 }
