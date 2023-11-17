@@ -1,17 +1,33 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
+
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Person person = new Person("maximilianus");
+        System.out.println(person.correct_name());
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        CapitalizeDecorator capitalizedPerson = new CapitalizeDecorator(person);
+        System.out.println(capitalizedPerson.correct_name());
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        TrimmerDecorator capitalizedTrimmedPerson = new TrimmerDecorator(capitalizedPerson);
+        System.out.println(capitalizedTrimmedPerson.correct_name());
+
+        Student student = new Student("john doe", "Class A");
+        System.out.println(student.correct_name());
+
+        CapitalizeDecorator capitalizedStudent = new CapitalizeDecorator(student);
+        System.out.println(capitalizedStudent.correct_name());
+
+        TrimmerDecorator capitalizedTrimmedStudent = new TrimmerDecorator(capitalizedStudent);
+        System.out.println(capitalizedTrimmedStudent.correct_name());
+
+        Teacher teacher = new Teacher("jane smith", "Mathematics");
+        System.out.println(teacher.correct_name());
+
+        CapitalizeDecorator capitalizedTeacher = new CapitalizeDecorator(teacher);
+        System.out.println(capitalizedTeacher.correct_name());
+
+        TrimmerDecorator capitalizedTrimmedTeacher = new TrimmerDecorator(capitalizedTeacher);
+        System.out.println(capitalizedTrimmedTeacher.correct_name());
     }
+
+
 }
