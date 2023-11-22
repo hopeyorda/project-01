@@ -1,3 +1,4 @@
+//this is teacher class
 class Teacher extends Person {
     private String specialization;
 
