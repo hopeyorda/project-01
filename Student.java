@@ -1,9 +1,8 @@
 class Student extends Person {
     private String classroom;
 
-    public Student(String name, String classroom) {
-        super(name);
-        this.classroom = classroom;
+    public Student(String name,int age,boolean parent_permission) {
+        super(name,age,parent_permission);
     }
 
     public String getClassroom() {
@@ -12,6 +11,5 @@ class Student extends Person {
 
     public void setClassroom(Classroom classroom) {
         this.classroom = String.valueOf(classroom);
-        classroom.getStudents().add(this);
     }
 }

@@ -9,6 +9,7 @@ public class Classroom {
         this.students = new ArrayList<>();
     }
 
+
     public String getLabel() {
         return label;
     }
