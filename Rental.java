@@ -1,18 +1,20 @@
+import java.util.Date;
+
 public class Rental {
-    private String date;
+    private Date date;
     private Book book;
     private Person person;
 
-    public Rental(Book book, Person person) {
+    public Rental(Date date,Book book, Person person) {
         this.book = book;
         this.person = person;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
