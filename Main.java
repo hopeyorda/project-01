@@ -23,7 +23,7 @@ public class Main {
 
             switch (option) {
                 case 1:
-                    App.listAllBooks();
+                    app.listAllBooks();
                     break;
                 case 2:
                     app.listAllPeople();
