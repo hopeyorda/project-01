@@ -30,11 +30,14 @@ public class Person implements Nameable {
     public String getName() {
         return name;
 
-        public String getName () {
-            return name;
-        }
+
+    }
         public int getAge () {
             return age;
         }
+
+    @Override
+    public String correct_name() {
+        return null;
     }
 }

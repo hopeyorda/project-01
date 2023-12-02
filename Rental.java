@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Rental {
     private String date;
     private Book book;
@@ -6,6 +8,9 @@ public class Rental {
     public Rental(Book book, Person person) {
         this.book = book;
         this.person = person;
+    }
+
+    public Rental(Date date, Book book, Person person) {
     }
 
     public String getDate() {
