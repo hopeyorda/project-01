@@ -1,17 +1,52 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Main {
+
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
+        boolean quit = false;
+        App app = new App();
+        while (!quit) {
+            System.out.println("Choose an option:");
+            System.out.println("1. List all books");
+            System.out.println("2. List all people");
+            System.out.println("3. Create a person");
+            System.out.println("4. Create a book");
+            System.out.println("5. Create a rental");
+            System.out.println("6. List rentals for a person");
+            System.out.println("7. Quit");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+            int option = scanner.nextInt();
+            scanner.nextLine();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+            switch (option) {
+                case 1:
+                    app.listAllBooks();
+                    break;
+                case 2:
+                    app.listAllPeople();
+                    break;
+                case 3:
+                    app.createPerson();
+                    break;
+                case 4:
+                    app.createBook();
+                    break;
+                case 5:
+                    app.createRental();
+                    break;
+                case 6:
+                    app.listRentalsForPerson();
+                    break;
+                case 7:
+                    quit = true;
+                    break;
+                default:
+                    System.out.println("Invalid option");
+            }
         }
     }
+
 }
