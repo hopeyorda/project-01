@@ -1,6 +1,7 @@
 import java.util.ArrayList;
-   import java.util.List;
+import java.util.List;
 import java.util.Scanner;
+import java.util.Date;
 public   class App {
     private static List<Book> books = new ArrayList<>();
     private static final List<Person> people = new ArrayList<>();
@@ -12,7 +13,6 @@ public   class App {
             System.out.println(book.getTitle() + " by " + book.getAuthor());
         }
     }
-
     public static void listAllPeople() {
         System.out.println("List of people:");
         for (Person person : people) {
@@ -21,7 +21,6 @@ public   class App {
             System.out.println("ID:" + person.getId());
         }
     }
-
     public static void createPerson() {
         Scanner scanner = new Scanner(System.in);
 
@@ -91,8 +90,8 @@ public   class App {
             System.out.println("Book not found.");
             return;
         }
-
-        Rental rental = new Rental(book, person);
+        Date date=new Date();
+        Rental rental = new Rental(date,book, person);
         rentals.add(rental);
         System.out.println("Rental created successfully.");
     }

@@ -1,14 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Person implements Nameable  {
+public class Person implements Nameable {
     int id;
-
-
     String name;
-
     int age;
-
     boolean parent_permission;
 
 
@@ -19,35 +15,26 @@ public class Person implements Nameable  {
         this.parent_permission = parent_permission;
     }
 
+    public String getCorrectName() {
+
+        if (name.length() > 10) {
+            return name.substring(0, 10).toUpperCase();
+        } else {
+            return name.toUpperCase();
+        }
+    }
     public int getId() {
         return id;
     }
 
     public String getName() {
         return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public boolean isParentPermission() {
-        return parent_permission;
-    }
-
-    public void setParentPermission(boolean parent_permission) {
-        this.parent_permission = parent_permission;
-    }
-
-    public String correct_name() {
-        return name;
+        public String getName () {
+            return name;
+        }
+        public int getAge () {
+            return age;
+        }
     }
 }

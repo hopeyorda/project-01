@@ -15,24 +15,8 @@ public class Book {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public List<Rental> getRentals() {
-        return rentals;
-    }
-
-    public void addRental(Rental rental) {
-        rentals.add(rental);
-
-    }
 }
